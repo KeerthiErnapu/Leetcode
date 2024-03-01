@@ -1,0 +1,16 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int arr[]={1,2,8,4,6,9},d=3,idx=0;
+        int nums[]=new int[arr.length];
+        for(int i=(6-d);i<6;i++){
+            nums[idx++]=arr[i];
+        }
+        for(int i=0;i<6-d;i++){
+            nums[idx++]=arr[i];
+        }
+        for(int i=0;i<6;i++){
+            System.out.println(nums[i]);
+        }
+    }
+}
