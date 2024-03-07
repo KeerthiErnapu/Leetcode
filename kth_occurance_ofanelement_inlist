@@ -1,0 +1,27 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int arr[]={1,4,5,6,6,2,6,7,6};
+        int queue[]={5,20,10,7,8,4,3};
+        int k=6,idx=0;
+        Map<Integer,Integer> li=new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==k){
+                li.put(++idx,i);
+            }
+        }
+        for(int i=0;i<queue.length;i++){
+            if(li.containsKey(queue[i])){
+                queue[i]=li.get(queue[i]);
+            }
+            else{
+                queue[i]=-1;
+            }
+        }
+        for(int i=0;i<queue.length;i++){
+            System.out.println(queue[i]);
+        }
+    }
+}
